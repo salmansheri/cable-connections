@@ -1,0 +1,35 @@
+<%- include("partials/header"); %>
+<section>
+  <div class="card">
+    <div class="card-header text-center">
+      <h1>All requests</h1>
+    </div>
+    <div class="card-body">
+      <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">S No</th>
+            <th scope="col">Request Id</th>
+            <th scope="col">Username</th>
+            <th scope="col">Date</th>
+            <th scope="col">Address</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% registers.forEach(function(register) { %>
+          <tr>
+            <th scope="row"><%= register._id %></th>
+            <td><%= register.requestid %></td>
+            <td><%= register.username %></td>
+            <td><%= register.date %></td>
+            <td><%= register.address %></td>
+          </tr>
+
+          <% }) %>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<%- include("partials/footer"); %>

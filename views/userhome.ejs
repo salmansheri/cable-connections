@@ -1,0 +1,24 @@
+<%- include("partials/header"); %> 
+<div class="card text-center m-5">
+    <div class="card-header">
+      <h1>Welcome</h1>
+    </div>
+    <div class="user-home-card card-body border" id="active">
+      <h5 class="card-title">Request for Cable Connection</h5>
+      
+      <a href="/request" class="btn btn-primary">Request</a>
+    </div>
+    <div class="user-home-card card-body border" id="link">
+      <h5 class="card-title">Cancel Request</h5>
+      
+      <a href="/cancelreq" class="btn btn-danger">Cancel</a>
+    </div>
+    <div class="user-home-card card-body border">
+      <h5 class="card-title">View All connection request</h5>
+     
+      <a href="/viewallrequest" class="btn btn-success">View</a>
+    </div>
+    
+  </div>
+
+<%- include("partials/footer"); %> 

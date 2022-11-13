@@ -1,0 +1,109 @@
+<%- include("partials/header"); %>
+<section class="d-flex flex-column justify-content-center align-items-center" style="height: 100vh;">
+
+   <div class="card">
+      <div class="card-header">
+         <h2>Accept or Reject Requests</h2>
+
+      </div>
+      <div class="card-body">
+         <table class="table">
+            <thead>
+               <tr>
+                  <th scope="col">Id</th>
+                  <th scope="col">First Name</th>
+                  <th scope="col">Second Name</th>
+                  <th scope="col">Third Name</th>
+                  <th scope="col">Accept</th>
+                  <th scope="col">Reject</th>
+
+               </tr>
+
+            </thead>
+            <tbody>
+               <% users.forEach(function(user) { %> 
+                <tr>
+
+                  <form action="/connections" method="post">
+                     <th scope="row"><%= user._id %></th>
+                     <td><input id="fname"  name="userfname" value="<%= user.fname %>"></input></td>
+                     <td><input id="lname"  name="userlname" value="<%= user.lname %>"></input></td>
+                     <td><input id="email"  name="useremail" value="<%= user.email %>"></input></td>
+                     <td>
+                        <button id="acceptbtn" type="submit" class="btn btn-primary">Accept</button>
+
+                     </td>
+
+                     </form>
+
+                     <td>
+                        <form action="/reject" method="post">
+                           <input id="check" type="checkbox" name="checkbox" onchange="this.form.submit()" value="<%= user._id %>">
+                        </form>
+
+                     </td>
+                  </tr>
+
+
+               <% }) %> 
+                                
+
+                 
+
+               
+
+                     
+
+             
+
+                  
+                 
+                     <!-- <div>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                     </div> -->
+                    
+                  <!-- </form> --> 
+                 
+                   
+             
+
+            </tbody>
+         </table>
+
+      </div>
+   </div>
+   
+        
+
+   
+   
+    
+
+</section>
+<script>
+   var acceptbtnEl = document.getElementById("acceptbtn"); 
+   var check = document.getElementById('check');
+   acceptbtnEl.addEventListener("click", function() {
+      var fname = document.getElementById("fname")
+      var lname = document.getElementById("lname"); 
+      var email = document.getElementById("email"); 
+      if (fname.value !== "" || lname.value !== "" || email.value !== "") {
+         alert("Accepted successfully!"); 
+      }  else {
+         event.preventDefault(); 
+      }
+
+
+   }); 
+
+   check.addEventListener("change", function() {
+      alert("Removed successfully");
+   })
+</script>
+
+
+
+
+<%- include("partials/footer"); %> 

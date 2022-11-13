@@ -1,0 +1,45 @@
+<%- include("partials/header"); %> 
+<section style="display: flex; flex-direction: column; justify-content: center; align-items: center; height: 90vh;">
+  <div class="card" style="width: 1000px;">
+    <div class="card-header text-center">
+      <h2>All Connections</h2>
+
+    </div>
+    <div class="card-body">
+      <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">Id</th>
+          <th scope="col">First Name</th>
+          <th scope="col">Last Name</th>
+          <th scope="col">Email-id</th>
+        </tr>
+      </thead>
+      <tbody>
+          <% connections.forEach(function(connection){ %>
+              <tr>
+               
+                  <th scope="row"><%= connection._id %></th>
+  
+               
+                  
+                  <td><%= connection.fname %></td>
+                  <td><%= connection.lname %></td>
+                  <td><%= connection.email %></td>
+                </tr>
+                
+  
+          <% }) %> 
+        
+       
+      </tbody>
+    </table>
+  </div>
+  </div>
+ 
+</section>
+
+
+<%- include("partials/footer"); %> 
+
+

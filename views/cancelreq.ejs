@@ -1,0 +1,47 @@
+<%- include("partials/header") %> 
+<section class="" >
+    <div class="card">
+        <div class="card-header text-center">
+            <h2>Cancel Requests</h2>
+
+        </div>
+        <div class="card-body">
+            <table class="table">
+                <thead>
+                  <tr>
+                    <th scope="col">Select to <br>cancel request</th>
+                    <th scope="col">Request-Id</th>
+                    <th scope="col">Username</th>
+                    <th scope="col">Date</th>
+                    <th scope="col">Address</th>
+                  </tr>
+                </thead>
+                <% registers.forEach(function(register) { %>
+                     <tbody>
+                  <tr>
+                    <form action="/cancelreq" method="post">
+                        <th scope="row"><input name="checkedElid" type="checkbox" onchange="this.form.submit()" value="<%= register._id %>"></th>
+                    <td><%= register.requestid %></td>
+                    <td><%= register.username %></td>
+                    <td><%= register.date %></td>
+                    <td><%= register.address %></td>
+
+                    </form>
+                    
+                  </tr>
+                 
+                </tbody>
+
+               <% }) %>
+               
+              </table>
+
+        </div>
+    </div>
+        
+        
+
+    
+</section>
+
+<%- include("partials/footer"); %> 

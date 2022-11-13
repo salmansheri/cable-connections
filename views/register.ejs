@@ -1,0 +1,60 @@
+<%- include("partials/header");%>
+    <div class=""
+        style="display: flex; flex-direction: column; height: 100vh; justify-content: center; align-items: center;">
+        <h1>Cable Registeration</h1>
+        <br>
+        <br>
+        <div class="card" style="width:50rem; padding: 30px; box-shadow: 0 3px 5px black">
+            <form class="" action="/register" style="text-align:center" method="post">
+                <div class="input-group">
+                    <span class="input-group-text">First and last name</span>
+                    <input type="text" aria-label="First name" class="form-control" name="fname">
+                    <input type="text" aria-label="Last name" class="form-control" name="lname">
+                </div>
+                <br>
+                <br>
+
+                <div class="input-group mb-3">
+                    <input type="email" class="form-control" placeholder="E-mail address"
+                        aria-label="Recipient's username" aria-describedby="basic-addon2" name="email">
+                    <span class="input-group-text" id="basic-addon2">@example.com</span>
+                </div>
+
+
+
+
+
+                <div class="input-group mb-3">
+                    <input type="text" class="form-control" placeholder="Username" aria-label="Username"
+                        name="username">
+                    <br>
+                    <input type="text" class="form-control" placeholder="password" aria-label="password"
+                        name="password">
+                </div>
+
+
+                <br>
+                <br>
+                <button type="submit" class="btn btn-outline-primary" id="btn">Register</button>
+            </form>
+
+        </div>
+
+
+    </div>
+
+
+    </body>
+    <!-- <script>
+        var input = document.querySelector(".form-control");
+        var btnEl = document.getElementById("btn");
+        btnEl.addEventListener("click", function () {
+            if (input.value !== "") {
+                alert("Registered successfully! Thank you for registering")
+            } else {
+                event.preventDefault();
+            }
+        })
+    </script> -->
+
+    </html>

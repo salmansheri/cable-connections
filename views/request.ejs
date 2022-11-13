@@ -1,0 +1,38 @@
+<%- include("partials/header")  %> 
+<section class="d-flex justify-content-center align-items-center" style="height: 80vh;">
+    <div class="card requestCard" style="width: 1000px;">
+        <div class="card-header text-center bg-dark text-light">
+            <h1>Request</h1>
+
+        </div>
+        <div class="card-body">
+            <form action="/request" method="post">
+                <div class="form-floating mb-3">
+                    <input type="text" class="form-control" id="floatingInput" placeholder="Request Id" value="CC<%= requestid %>" name="reqid" aria-disabled="true">
+                    <label for="floatingInput">Request Id</label>
+                  </div>
+                  <div class="form-floating mb-3">
+                    <input type="date" class="form-control" id="floatingPassword" placeholder="Date" name="reqdate">
+                    <label for="floatingDate">Request-Date</label>
+                  </div>
+                  <div class="form-floating mb-3">
+                    <input type="text" class="form-control" id="floatingPassword" placeholder="Password" name="username">
+                    <label for="floatingInput">UserName</label>
+                  </div>
+                
+                 
+                  <div class="form-floating mb-3">
+                    <input type="text" class="form-control" id="floatingPassword" placeholder="Password" name="address">
+                    <label for="floatingInput">Address</label>
+                  </div>
+                
+                  <button type="submit" class="btn btn-dark">Submit</button>
+
+            </form>
+
+        </div>
+    </div>
+    
+</section>
+
+<%- include("partials/footer")  %> 

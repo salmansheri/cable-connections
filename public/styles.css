@@ -1,0 +1,109 @@
+body {
+    margin: 0;
+    padding:0; 
+    
+}
+
+.main-page {
+
+}
+
+.navbar {
+    display: flex; 
+    background-color: indigo;
+    min-height: 4rem; 
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.main {
+    display: flex; 
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    height: 90vh; 
+    margin-left: 100px;  
+    
+    
+
+}
+
+.mainbtn {
+    margin-top: 50px; 
+    display: flex; 
+    justify-content: space-between;
+
+}
+a {
+    text-decoration: none;
+    color: white; 
+    font-weight: bold;
+    margin-right: 20px; 
+    margin-left:20px; 
+    font-size: 30px; 
+    
+}
+
+.sub-main {
+    
+     height: 100vh; 
+     width: 50%; 
+     position: absolute; 
+     right: 0; 
+     border-style: solid;
+     border: 0px 200px 200px; 
+     
+     background-size: cover; 
+     box-shadow: 0 3px 5px black; 
+}
+.main-container {
+   display: flex; 
+   justify-content: center; 
+   align-items: center; 
+   height: 100vh; 
+   flex-direction: column;
+
+}
+
+.formgroup {
+    height: 100vh; 
+}
+
+.userpage {
+    display: flex; 
+    height: 100vh;
+    align-items: center; 
+
+}
+
+.user-sub-container {
+    margin-left: 50px; 
+}
+
+.user-sub-container a {
+    margin-top: 50px; 
+}
+
+.adminhome .card {
+    margin-right:100px;
+}
+
+.adminhome .card:hover {
+    box-shadow: 0 4px 8px black; 
+}
+
+.user-home-card:hover {
+    box-shadow: 0 4px 8px black;
+    
+
+}
+
+.requestCard {
+   
+    
+    box-shadow: 0 4px 8px black;
+}
+
+.requestCard input {
+    border-color: black; 
+}

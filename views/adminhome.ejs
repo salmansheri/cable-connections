@@ -1,0 +1,44 @@
+<%- include("partials/header"); %>
+<section
+  style="
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+  "
+>
+  <div
+    class="adminhome"
+    style="
+      align-items: space-around;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+    "
+  >
+    <div class="card bg-primary mb-3" style="max-width: 18rem; color: white">
+      <div class="card-header">View All Connection Request</div>
+      <div class="card-body">
+        <h5 class="card-title">All connectin request are here</h5>
+        <a class="btn btn-dark" href="/viewrequests">Go</a>
+      </div>
+    </div>
+    <div class="card bg-danger mb-3" style="max-width: 18rem; color: white">
+      <div class="card-header">Accept/Reject Connection Request</div>
+      <div class="card-body">
+        <h5 class="card-title">Accept/Reject Connections requests here</h5>
+        <a class="btn btn-dark" href="/acceptorreject">Go</a>
+      </div>
+    </div>
+    
+    <div class="card bg-info mb-3 text-light" style="max-width: 18rem">
+      <div class="card-header">View all Registered Connection</div>
+      <div class="card-body">
+        <h5 class="card-title">View all Registered Connections Here:</h5>
+        <a class="btn btn-dark" href="/allconnections">Go</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<%- include("partials/footer"); %>
